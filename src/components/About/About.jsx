@@ -99,7 +99,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="relative overflow-hidden bg-primary">
+    <section id="about" className="relative overflow-hidden bg-primary pt-20">
       {/* Hero Section with Parallax */}
       <div ref={ref} className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <motion.div 

@@ -3,6 +3,7 @@ import { motion, useMotionTemplate, useMotionValue, useSpring } from "framer-mot
 import { FiArrowRight, FiLogIn } from "react-icons/fi";
 import { MdOutlineArrowUpward } from "react-icons/md";
 import { twMerge } from "tailwind-merge";
+import { Link } from "react-router-dom";
 
 const DarkGridHero = () => {
   return (
@@ -87,7 +88,9 @@ const Content = () => {
         }}
         className="flex flex-col items-center gap-6 sm:flex-row"
       >
-        <RoundedSlideButton />
+        <Link to="/contact">
+          <RoundedSlideButton />
+        </Link>
         <MagnetButton />
       </motion.div>
     </div>
