@@ -432,25 +432,7 @@ const About = () => {
             </div>
           </div>
           
-          {/* Career button centered below team */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <p className="text-silver mb-6 text-lg">
-              Want to join our team of creative professionals?
-            </p>
-            <motion.button 
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-secondary hover:bg-secondary-dark text-white px-8 py-4 rounded-md font-medium transition-colors duration-300 inline-flex items-center"
-            >
-              View Careers <FiArrowRight className="ml-2" />
-            </motion.button>
-          </motion.div>
+         
         </div>
         
         {/* Decorative elements */}
