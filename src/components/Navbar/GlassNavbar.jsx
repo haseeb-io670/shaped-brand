@@ -114,7 +114,6 @@ const Links = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
-    { name: 'Projects', path: '/projects' },
   ];
 
   return (
@@ -150,10 +149,6 @@ const TextLink = ({ text, path }) => {
 
 const Buttons = ({ menuOpen, setMenuOpen }) => (
   <div className="flex items-center gap-4">
-    <div className="hidden md:block">
-      <SignInButton />
-    </div>
-
     <Link
       to="/contact"
       className="relative scale-100 overflow-hidden rounded-lg bg-gradient-to-br from-red-600 from-40% to-red-400 px-4 py-2 font-medium text-white transition-transform hover:scale-105 active:scale-95"
@@ -172,16 +167,7 @@ const Buttons = ({ menuOpen, setMenuOpen }) => (
   </div>
 );
 
-const SignInButton = () => {
-  return (
-    <Link to="/login" className="group relative scale-100 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95">
-      <span className="relative z-10 text-white/90 transition-colors group-hover:text-white">
-        Sign in
-      </span>
-      <span className="absolute inset-0 z-0 bg-gradient-to-br from-white/20 to-white/5 opacity-0 transition-opacity group-hover:opacity-100" />
-    </Link>
-  );
-};
+
 
 const MobileMenu = ({ menuOpen }) => {
   const [ref, { height }] = useMeasure();
@@ -189,7 +175,6 @@ const MobileMenu = ({ menuOpen }) => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
-    { name: 'Projects', path: '/projects' },
   ];
 
   return (
@@ -204,7 +189,6 @@ const MobileMenu = ({ menuOpen }) => {
         {navLinks.map((link) => (
           <TextLink key={link.name} text={link.name} path={link.path} />
         ))}
-        <SignInButton />
       </div>
     </motion.div>
   );

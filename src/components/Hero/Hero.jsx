@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { motion, useMotionTemplate, useMotionValue, useSpring } from "framer-motion";
-import { FiArrowRight, FiLogIn } from "react-icons/fi";
+import { FiArrowRight } from "react-icons/fi";
 import { MdOutlineArrowUpward } from "react-icons/md";
 import { twMerge } from "tailwind-merge";
 import { Link } from "react-router-dom";
@@ -88,9 +88,6 @@ const Content = () => {
         }}
         className="flex flex-col items-center gap-6 sm:flex-row"
       >
-        <Link to="/contact">
-          <RoundedSlideButton />
-        </Link>
         <MagnetButton />
       </motion.div>
     </div>
@@ -106,31 +103,7 @@ const GlowingChip = ({ children }) => {
   );
 };
 
-const RoundedSlideButton = () => {
-  return (
-    <button
-      className={` 
-        relative z-0 flex items-center gap-2 overflow-hidden rounded-lg border-[1px] 
-        border-secondary px-4 py-2 font-semibold 
-        uppercase text-secondary transition-all duration-500 
-        
-        before:absolute before:inset-0 
-        before:-z-10 before:translate-x-[150%] 
-        before:translate-y-[150%] before:scale-[2.5] 
-        before:rounded-[100%] before:bg-secondary 
-        before:transition-transform before:duration-1000 
-        before:content-[""] 
-
-        hover:scale-105 hover:text-primary 
-        hover:before:translate-x-[0%] 
-        hover:before:translate-y-[0%] 
-        active:scale-95`} 
-    > 
-      <FiLogIn /> 
-      <span>Get Started</span> 
-    </button> 
-  ); 
-}; 
+ 
 
 const MagnetButton = () => { 
   const ref = useRef(null); 

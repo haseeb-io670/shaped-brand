@@ -44,59 +44,41 @@ const About = () => {
   
   // Team members data
   const teamMembers = [
-    {
-      name: 'Alex Morgan',
-      role: 'Founder & CEO',
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80',
-      quote: 'We believe in transforming brands through strategic innovation and creative excellence.'
+     {
+      name: 'Muhammad Nawaz',
+      role: 'Senior Graphic Designer',
+      image: '/images/nawazz bhi black.png',
+      quote: 'Every brand has a unique story - we help you tell it in the most compelling way.'
     },
     {
-      name: 'Sarah Chen',
-      role: 'Creative Director',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80',
-      quote: 'Design is not just what it looks like, it\'s how it works for your business goals.'
+      name: 'Faad Rajpoot',
+      role: 'Video Editor',
+      image: '/images/faad black.png',
+      quote: 'Creativity is intelligence having fun, and we bring that energy to every project.'
     },
     {
-      name: 'David Wilson',
-      role: 'Marketing Strategist',
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80',
-      quote: 'The best marketing doesn\'t feel like marketing; it feels like value.'
+      name: 'Haseeb Sajjad',
+      role: 'Software Developer',
+      image: '/images/haseeb black.png',
+      quote: 'Code is poetry written in logic, and we craft digital masterpieces.'
     },
+    
+    {
+      name: 'Humaira Arshad',
+      role: 'Graphic Designer',
+      image: '/images/humaira ..png',
+      quote: 'Great design is invisible - it just works beautifully and intuitively.'
+    },
+    {
+      name: 'Musfira Ghazanfar',
+      role: 'Social Media Manager',
+      image: '/images/musfria.png',
+      quote: 'The best marketing tells a story that resonates with hearts and minds.'
+    },
+   
   ];
   
-  // Timeline data
-  const timeline = [
-    {
-      year: '2018',
-      title: 'Founded in New York',
-      description: 'Shaped Brand was established with a vision to transform how businesses connect with their audiences.'
-    },
-    {
-      year: '2019',
-      title: 'First Major Client',
-      description: 'Partnered with a Fortune 500 company, setting the foundation for our enterprise solutions.'
-    },
-    {
-      year: '2020',
-      title: 'Digital Transformation',
-      description: 'Pivoted to help businesses thrive online during global challenges, doubling our client base.'
-    },
-    {
-      year: '2021',
-      title: 'International Expansion',
-      description: 'Opened offices in London and Singapore, bringing our expertise to global markets.'
-    },
-    {
-      year: '2022',
-      title: 'Award Recognition',
-      description: 'Received multiple industry awards for our innovative campaigns and client results.'
-    },
-    {
-      year: '2023',
-      title: 'Sustainability Initiative',
-      description: 'Launched our commitment to carbon-neutral operations and sustainable marketing practices.'
-    },
-  ];
+
 
   return (
     <section id="about" className="relative overflow-hidden bg-primary pt-20">
@@ -129,13 +111,6 @@ const About = () => {
             <p className="text-xl text-silver max-w-3xl mx-auto mb-8">
               A creative collective of strategists, designers, and digital innovators passionate about transforming businesses through powerful brand experiences.
             </p>
-            <motion.button 
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-secondary hover:bg-secondary-dark text-white px-8 py-4 rounded-md font-medium transition-colors duration-300 flex items-center mx-auto"
-            >
-              Our Journey <FiArrowRight className="ml-2" />
-            </motion.button>
           </motion.div>
         </div>
         
@@ -236,7 +211,7 @@ const About = () => {
                     <FiAward className="text-white text-xl" />
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold">Award Winning</h3>
+                    <h3 className="text-white font-semibold">Excellence</h3>
                     <p className="text-light-grey text-sm">Agency of the Year 2023</p>
                   </div>
                 </div>
@@ -244,6 +219,243 @@ const About = () => {
             </motion.div>
           </div>
         </div>
+      </div>
+      
+      {/* CEO Message Section */}
+      <div className="py-24 bg-gradient-to-b from-primary to-matte-black relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              Message from Our <span className="text-secondary">CEO</span>
+            </h2>
+          </motion.div>
+          
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              {/* CEO Image */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="relative z-10 overflow-hidden rounded-2xl shadow-2xl">
+                  <img 
+                    src="/images/CEO 960 to 950 size.png" 
+                    alt="Mamoon Iftikhar Raja - CEO & Founder" 
+                    className="w-full h-auto object-cover"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = 'https://placehold.co/600x600/111111/FFFFFF?text=CEO';
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-matte-black/60 to-transparent"></div>
+                </div>
+                
+                {/* Decorative elements */}
+                <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-secondary rounded-full opacity-10 blur-xl z-0"></div>
+                <div className="absolute -top-8 -left-8 w-40 h-40 bg-accent rounded-full opacity-10 blur-xl z-0"></div>
+                
+                {/* CEO Badge */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  viewport={{ once: true }}
+                  className="absolute -bottom-10 left-10 bg-matte-black p-4 rounded-xl shadow-xl border border-dark-grey z-20"
+                >
+                  <div className="flex items-center space-x-3">
+                    <div className="bg-secondary p-2 rounded-md">
+                      <FiUsers className="text-white text-xl" />
+                    </div>
+                    <div>
+                      <h3 className="text-white font-semibold">Founder & CEO</h3>
+                      <p className="text-light-grey text-sm">Since 2020</p>
+                    </div>
+                  </div>
+                </motion.div>
+              </motion.div>
+              
+              {/* CEO Message */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                {/* Quote decoration */}
+                <div className="absolute -top-6 -left-6 text-6xl text-secondary/20 font-serif z-0">
+                  <FaQuoteLeft />
+                </div>
+                
+                <div className="relative z-10 bg-primary/50 backdrop-blur-sm p-8 rounded-2xl border border-dark-grey">
+                  <blockquote className="text-lg md:text-xl text-silver leading-relaxed mb-8 italic">
+                    "At Shaped Brand, we believe every business carries a unique story waiting to be shared. Since our beginning in 2020, my vision has been to help brands not only grow but also build genuine, lasting connections with their audiences. Guided by creativity, innovation, and a passion for excellence, our team is dedicated to crafting digital experiences that inspire, engage, and deliver real impact. Together, we're not just building brands—we're shaping the future."
+                  </blockquote>
+                  
+                  <div className="border-t border-dark-grey pt-6">
+                    <div className="flex items-center">
+                      <div className="w-1 h-16 bg-secondary mr-4"></div>
+                      <div>
+                        <h4 className="text-white text-xl font-bold">Mamoon Iftikhar Raja</h4>
+                        <p className="text-secondary font-medium">Founder & CEO, Shaped Brand</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Floating elements */}
+                <motion.div 
+                  style={{ 
+                    x: useTransform(mouseXSpring, (x) => x * 0.5),
+                    y: useTransform(mouseYSpring, (y) => y * 0.5),
+                  }}
+                  className="absolute top-1/4 right-0 w-20 h-20 rounded-full bg-secondary opacity-10 blur-xl"
+                />
+              </motion.div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Background decorative elements */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-secondary rounded-full opacity-5 blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent rounded-full opacity-5 blur-3xl"></div>
+        </div>
+      </div>
+      
+      {/* Team Section */}
+      <div className="py-24 bg-matte-black relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              Meet Our <span className="text-secondary">Team</span>
+            </h2>
+            <p className="text-silver max-w-3xl mx-auto text-lg">
+              The creative minds and strategic thinkers behind our work.
+            </p>
+          </motion.div>
+          
+          {/* First row - 3 team members */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            {teamMembers.slice(0, 3).map((member, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -10 }}
+                className="bg-primary rounded-2xl overflow-hidden group"
+              >
+                <div className="relative overflow-hidden">
+                  <img 
+                    src={member.image} 
+                    alt={member.name} 
+                    className="w-full h-80 object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-60"></div>
+                </div>
+                
+                <div className="p-6 relative">
+                  <motion.div 
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, delay: 0.2 + index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="absolute -top-10 right-6 bg-secondary p-4 rounded-xl shadow-lg"
+                  >
+                    <FaQuoteLeft className="text-white text-xl" />
+                  </motion.div>
+                  
+                  <h3 className="text-white text-xl font-bold mb-1">{member.name}</h3>
+                  <p className="text-secondary mb-4">{member.role}</p>
+                  <p className="text-silver italic">"{member.quote}"</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          
+          {/* Second row - 2 team members centered */}
+          <div className="flex justify-center mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+              {teamMembers.slice(3, 5).map((member, index) => (
+              <motion.div
+                key={index + 3}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: (index + 3) * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -10 }}
+                className="bg-primary rounded-2xl overflow-hidden group"
+              >
+                <div className="relative overflow-hidden">
+                  <img 
+                    src={member.image} 
+                    alt={member.name} 
+                    className="w-full h-80 object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-60"></div>
+                </div>
+                
+                <div className="p-6 relative">
+                  <motion.div 
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, delay: 0.2 + (index + 3) * 0.1 }}
+                    viewport={{ once: true }}
+                    className="absolute -top-10 right-6 bg-secondary p-4 rounded-xl shadow-lg"
+                  >
+                    <FaQuoteLeft className="text-white text-xl" />
+                  </motion.div>
+                  
+                  <h3 className="text-white text-xl font-bold mb-1">{member.name}</h3>
+                  <p className="text-secondary mb-4">{member.role}</p>
+                  <p className="text-silver italic">"{member.quote}"</p>
+                </div>
+              </motion.div>
+            ))}
+            </div>
+          </div>
+          
+          {/* Career button centered below team */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <p className="text-silver mb-6 text-lg">
+              Want to join our team of creative professionals?
+            </p>
+            <motion.button 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-secondary hover:bg-secondary-dark text-white px-8 py-4 rounded-md font-medium transition-colors duration-300 inline-flex items-center"
+            >
+              View Careers <FiArrowRight className="ml-2" />
+            </motion.button>
+          </motion.div>
+        </div>
+        
+        {/* Decorative elements */}
+        <div className="absolute top-20 left-10 w-64 h-64 bg-secondary rounded-full opacity-5 blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-accent rounded-full opacity-5 blur-3xl"></div>
       </div>
       
       {/* Core Values Section */}
@@ -336,143 +548,7 @@ const About = () => {
         </div>
       </div>
       
-      {/* Timeline Section */}
-      <div className="py-24 bg-primary relative">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Our <span className="text-secondary">Journey</span>
-            </h2>
-            <p className="text-silver max-w-3xl mx-auto text-lg">
-              From our humble beginnings to becoming an industry leader, here's how we've evolved over the years.
-            </p>
-          </motion.div>
-          
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-dark-grey"></div>
-            
-            {/* Timeline items */}
-            <div className="space-y-24">
-              {timeline.map((item, index) => (
-                <motion.div 
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className={`relative flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
-                >
-                  <div className="w-1/2"></div>
-                  
-                  {/* Timeline dot */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-secondary border-4 border-primary z-10"></div>
-                  
-                  {/* Content */}
-                  <motion.div 
-                    whileHover={{ scale: 1.03 }}
-                    className={`w-1/2 ${index % 2 === 0 ? 'pl-12' : 'pr-12'}`}
-                  >
-                    <div className="bg-matte-black p-6 rounded-xl border border-dark-grey hover:border-secondary transition-all duration-300">
-                      <span className="text-secondary font-bold text-xl mb-2 block">{item.year}</span>
-                      <h3 className="text-white text-xl font-bold mb-2">{item.title}</h3>
-                      <p className="text-silver">{item.description}</p>
-                    </div>
-                  </motion.div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      {/* Team Section */}
-      <div className="py-24 bg-matte-black relative overflow-hidden">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Meet Our <span className="text-secondary">Team</span>
-            </h2>
-            <p className="text-silver max-w-3xl mx-auto text-lg">
-              The creative minds and strategic thinkers behind our award-winning work.
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10 }}
-                className="bg-primary rounded-2xl overflow-hidden group"
-              >
-                <div className="relative overflow-hidden">
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
-                    className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-60"></div>
-                </div>
-                
-                <div className="p-6 relative">
-                  <motion.div 
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.3, delay: 0.2 + index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="absolute -top-10 right-6 bg-secondary p-4 rounded-xl shadow-lg"
-                  >
-                    <FaQuoteLeft className="text-white text-xl" />
-                  </motion.div>
-                  
-                  <h3 className="text-white text-xl font-bold mb-1">{member.name}</h3>
-                  <p className="text-secondary mb-4">{member.role}</p>
-                  <p className="text-silver italic">"{member.quote}"</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="text-center mt-16"
-          >
-            <p className="text-silver mb-6 text-lg">
-              Want to join our team of creative professionals?
-            </p>
-            <motion.button 
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-secondary hover:bg-secondary-dark text-white px-8 py-4 rounded-md font-medium transition-colors duration-300 inline-flex items-center"
-            >
-              View Careers <FiArrowRight className="ml-2" />
-            </motion.button>
-          </motion.div>
-        </div>
-        
-        {/* Decorative elements */}
-        <div className="absolute top-20 left-10 w-64 h-64 bg-secondary rounded-full opacity-5 blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-accent rounded-full opacity-5 blur-3xl"></div>
-      </div>
+
     </section>
   );
 };
